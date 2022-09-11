@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font awesome file link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>PIZZARIO</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h2").addClass("important");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("#p1").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+</script>
+  <script>
+
+  function myFunction() {
+      alert("ORDER HAS BEEN PLACED!!");
+    }
+
+  </script>
+  
+<script>
+        $(document).ready(function() {
+          $("#st1").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1").css("color", "yellow");
+
+          });
+          $("#st2").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2").css("color", "yellow");
+
+          });
+          $("#st3").click(function() {
+              $(".fa-star").css("color", "black")
+              $("#st1, #st2, #st3").css("color", "yellow");
+
+          });
+          $("#st4").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2, #st3, #st4").css("color", "yellow");
+
+          });
+          $("#st5").click(function() {
+              $(".fa-star").css("color", "black");
+              $("#st1, #st2, #st3, #st4, #st5").css("color", "yellow");
+
+          });
+        });
+    </script>
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["cname"].value;
+    if (x == "" || x == null || x == " "){
+      alert("Please give us a Feedback");
+      return false;
+    }
+	else{
+	alert("Dear User.Thank you for your feedback.")
+    return true;
+	}
+}
+	
+</script>	
+	
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+<a href="#" class="logo"><i class="fas fa-cog"></i>BakeItFresh.</a>
+
+
+<div class="fas fa-bars"></div>
+
+
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#service">Services</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#feedback">Rating</a></li>
+  </ul>
+</nav>
+
+
+</header>
+
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section id="home" class="home">
+
+<h1 class="banner"><em>Welcome To <br>PI<span style="color:yellow;">ZZ</span>ARIO !!</em></h1>
+<h2>Order Fast.Get Fresh!!</h2>
+<button>Get Started</button>
+
+
+</section>
+
+<!-- home section ends -->
+
+<!-- abuout section starts  -->
+
+<section id="about" class="about">
+
+<h1 class="heading">About Us</h1>
+
+<div class="row">
+
+  <div class="content">
+    <h3>PIZZA GOODNESS IN EVERY MOUTHFUL!</h3><br>
+          <p id="p1">At Pizzario, we aim to serve the highest quality products and provide uncompromising heartfelt services to our valued guests and community.<br>Everyone deserves a wonderful pizza experience, everytime, which is why we are striving to bring Pizzario stores worldwide. We hope to welcome you to a US Pizza store near you soon!</p><br>
+          <p id="p1"><strong>ENJOY WITH US !!!</strong></p>
+          <button id="button1">Show Less</button></a>
+  </div>
+
+  <div class="image">
+    <img class="mid-image" src="https://images.unsplash.com/photo-1558138838-76294be30005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGl6emElMjByZXN0YXVyYW50fGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+  </div>
+
+</div>
+
+
+</section>
+
+<!-- about us section ends  -->
+
+<!-- service section starts  -->
+
+<section id="service" class="service">
+
+<h1 class="heading">Our Services</h1>
+
+<div class="row">
+
+  <div class="image">
+    <img src="https://thumbs.dreamstime.com/b/funny-pizza-delivery-fast-boxes-hours-95975207.jpg" alt="">
+  </div>
+  <div class="content">
+    <h3>24/7 Delivery</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptatem, tempore hic deserunt vel temporibus aperiam recusandae ratione, obcaecati at qui accusamus enim, laudantium eveniet. Inventore voluptas nemo placeat. Voluptas.</p>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="content">
+    <h3>Customize It!</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptatem, tempore hic deserunt vel temporibus aperiam recusandae ratione, obcaecati at qui accusamus enim, laudantium eveniet. Inventore voluptas nemo placeat. Voluptas.</p>
+    
+  </div>
+  <div class="image">
+    <img src="https://yithemes.com/wp-content/uploads/2021/07/how-to-create-your-own-pizza-customize-wooCommerce-products-with-add-ons-loop.jpg" alt="">
+  </div>
+
+</div>
+
+<div class="row">
+
+  
+  <div class="image">
+    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/hut-treat-party-pack.ea9fb7638e5f27452f84d806f462548d.1.jpg" alt="">
+  </div>
+  <div class="content">
+    <h3>Weekday Offers!</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde voluptatem, tempore hic deserunt vel temporibus aperiam recusandae ratione, obcaecati at qui accusamus enim, laudantium eveniet. Inventore voluptas nemo placeat. Voluptas.</p>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- service section ends -->
+
+<!-- menu section starts  -->
+
+<section id="menu" class="menu">
+
+<h1 class="heading">Menu</h1>
+
+<div class="row">
+
+<div class="card">
+  <div class="image">
+    <img src="https://www.royaldurbar.com/oadsempu/2022/03/cheese-pizza-royal-durbar.jpg" alt="">
+  </div>
+  <div class="info">
+    <h3 class="LABELL">MARGHERITA</h3>
+          <div class="L">
+            <label style="font-size:120%" for="mname"><strong>QUANTITY:</strong></label>
+            <input type="number" id="mname" name="mname" value="">
+            <button style="margin-top:5px;" type="button" onclick="myFunction()">PLACE ORDER</button>
+          </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="https://thebakernest.com/wp-content/uploads/2021/04/Farm-House-Pizza.jpg" alt="">
+  </div>
+  <div class="info">
+    <h3 class="LABELL">FARMHOUSE</h3>
+          <div class="L">
+            <label style="font-size:120%" for="mname"><strong>QUANTITY:</strong></label>
+            <input type="number" id="mname" name="mname" value="">
+            <button style="margin-top:5px;" type="button" onclick="myFunction()">PLACE ORDER</button>
+          </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="image">
+    <img src="https://buddyspizzaandcafe.com/wp-content/uploads/2021/06/paneer-pizza-1.jpg" alt="">
+	
+  </div>
+  <div class="info">
+    <h3 class="LABELL">BBQ FRESH</h3>
+          <div class="L">
+            <label style="font-size:120%" for="mname"><strong>QUANTITY:</strong></label>
+            <input type="number" id="mname" name="mname" value="">
+            <button style="margin-top:5px;" type="button" onclick="myFunction()">PLACE ORDER</button>
+          </div>
+  </div>
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- team section ends -->
+
+<!-- contact section starts  -->
+
+<section id="contact" class="contact">
+
+<h1 class="heading">Rating</h1>
+
+
+<div class="row">
+
+  <div class="image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAuM2nEkNghOSE_2oCXOSk2t4qsj5n3Df3HA&usqp=CAU" alt="">
+  </div>
+
+  <div class="form-container">
+    <form name="myForm" onsubmit="return validateForm()" method="post" required>
+      <div class="inputBox">
+        <input type="text" placeholder="first name">
+        <input type="text" placeholder="last name">
+      </div>
+
+      <input type="email" placeholder="email">
+      <textarea name="cname" id="cname" cols="30" rows="10" placeholder="message" value=""></textarea>
+      
+	  <div class = "con">
+      <h2 style = "margin-top : 10px; color: #7e7f80;">Ratings</h2>
+       <i class = "fa fa-star" aria-hidden = "true" id = "st1"></i>
+       <i class = "fa fa-star" aria-hidden = "true" id = "st2"></i>
+       <i class = "fa fa-star" aria-hidden = "true" id = "st3"></i>
+       <i class = "fa fa-star" aria-hidden = "true" id = "st4"></i>
+       <i class = "fa fa-star" aria-hidden = "true" id = "st5"></i>
+       </div>
+	   <input type="submit" id="myButton" value="send">
+
+    </form>
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- contact section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+<h1>Thank You!Visit again for more.</h1>
+
+<div class="icons">
+  <a href="#" class="fab fa-facebook-f"></a>
+  <a href="#" class="fab fa-twitter"></a>
+  <a href="#" class="fab fa-instagram"></a>
+</div>
+
+</section>
+
+
+<!-- footer section ends -->
+
+
+
+<!-- jquery file link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- custom js file link  -->
+
+<script src="main.js"></script>
+
+  
+</body>
+</html>

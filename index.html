@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PIZZARIO.IN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ebcfd5995b.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+  body{
+    background-color: gray;
+  }
+  .top {
+    text-align: center;
+  }
+
+  h1 {
+    font-family: Lucida Bright;
+    font-weight: 1000;
+    font-size: 5rem;
+    color: yellow;
+    padding-bottom: 30px;
+  }
+
+  input {
+    position: relative;
+    top: 10px;
+  }
+
+  label {
+    color: white;
+  }
+
+  .mid {
+    background-image: url('https://img.freepik.com/premium-photo/cut-into-slices-delicious-fresh-pizza-with-pepperoni_79782-17.jpg?w=2000');
+    background-size: cover;
+  }
+
+  .box{
+    position: relative;
+    left: 450px;
+    margin: 20px;
+    width: 80px;
+    background-color: white;
+  }
+
+  .logo{
+    color: gray;
+  }
+  .logo:hover{
+    color: black;
+  }
+</style>
+
+<script>
+  function validateForm() {
+
+    var n = document.getElementById("cname").value;
+    if(n=="" || n==" "){
+      document.getElementById('cust').innerHTML = " *CUSTOMER NAME SHOULD BE FILLED*";
+      return false;
+    }
+
+    const m = document.getElementById("mname");
+    if (m.value.length != 10) {
+      document.getElementById('mobileno').innerHTML = " *INVALID MOBILE NUMBER*";
+      return false;
+    }
+
+    var add = document.getElementById("aname").value;
+    if(add=="" || add==" "){
+      document.getElementById('addr').innerHTML = " *ADDRESS MANDATORY*";
+      return false;
+    }
+
+    var e = document.getElementById("ename").value;
+    if (e.indexOf('@') <= 0) {
+      document.getElementById('emailids').innerHTML = " *INVALID EMAIL*";
+      return false;
+    }
+
+    if (e.charAt(e.length - 4) != '.') {
+      document.getElementById('emailids').innerHTML = " *INVALID EMAIL*";
+      return false;
+    }
+
+
+    var a = document.forms["myForm"]["crname"].value;
+    var b = document.forms["myForm"]["pname"].value;
+
+    if(b=="" || b==" "){
+      document.getElementById('pass').innerHTML = " *PASSWORD CANNOT BE EMPTY*";
+      return false;
+    }
+
+    if (a != b) {
+      alert("Password Does Not Match");
+      return false;
+    }
+
+  }
+
+</script>
+
+<body>
+  <div class="container-fluid top" style="background-color: silver;">
+    <img src="https://www.freeiconspng.com/thumbs/pizza-png/pizza-png-4.png" alt="">
+    <h1><em>PIZZARIO</em></h1>
+  </div>
+
+  <div class="container-fluid mid">
+    <h1 style="font-size: 3rem; padding-top:30px;">SIGN UP!!</h1>
+    <form action="Main.html" name="myForm" onsubmit="return validateForm()" method="post" required>
+      <table>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="cname"><strong>Customer Name:</strong></label>
+          </td>
+          <td>
+            <input type="text" id="cname" name="cname " value=""><br /><br />
+            <span id="cust" style="color: red; " class="text-danger font-weight-bold"> </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="mname"><strong>Mobile No.:</strong></label>
+          </td>
+          <td>
+            <input type="number" id="mname" name="mname" value=""><br /><br />
+            <span id="mobileno" style="color: red; " class="text-danger font-weight-bold"> </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="aname"><strong>Address:</strong></label>
+          </td>
+          <td>
+            <input type="text" id="aname" name="aname" value=""><br /><br />
+            <span id="addr" style="color: red; " class="text-danger font-weight-bold"> </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="ename"><strong>Email ID:</strong></label>
+          </td>
+          <td>
+            <input type="text" id="ename" name="ename" value=""><br /><br />
+            <span id="emailids" style="color: red;" class="text-danger font-weight-bold"> </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="pname"><strong>Create Password:</strong></label>
+          </td>
+          <td>
+            <input type="password" id="pname" name="pname " value="" required minlenght="8" maxlength="15"><br /><br />
+            <span id="pass" style="color: red;" class="text-danger font-weight-bold"> </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label style="font-size:120%" for="crname"><strong>Confirm Password:</strong></label>
+          </td>
+          <td>
+            <input type="password" id="crname" name="crname " value=""><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="NEXT"><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="Rm" name="Rm" value="Remember Me"><label style="font-size:140%;position: relative;top:10px;padding-bottom: 30px;" for="rname">Remember me</label>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <center>
+    <div class="container-fluid" style="background-color: black;">
+      <h1 style="font-size: 1.5rem; padding-top: 20px; padding-bottom:0;">CONTACT US</h1>
+      <div class="row">
+        <div class="col-lg-4 box">
+          <h3><i class="fa-brands fa-instagram logo"></i></h3>
+        </div>
+        <div class="col-lg-4 box">
+          <h3><i class="fa-brands fa-twitter logo"></i></h3>
+        </div>
+        <div class="col-lg-4 box">
+          <h3><i class="fa-brands fa-facebook logo"></i></h3>
+        </div>
+      </div>
+    </div>
+  </center>
+
+</body>
+
+</html>
